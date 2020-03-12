@@ -1,0 +1,33 @@
+{
+    "name": "j6s/flow-apcu-with-fallback",
+    "description": "Package that provides an APCu cache backend that falls back to a given fallback if the APCu extension is not installed.",
+    "type": "neos-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Johannes Hertenstein",
+            "email": "hello@j6s.dev"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "neos/cache": "^5.3||^6.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+    },
+    "autoload": {
+        "psr-4": {
+            "J6s\\ApcuFallbackCache\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "J6s\\ApcuFallbackCache\\Tests\\": "Tests"
+        }
+    },
+    "config": {
+        "bin-dir": "bin",
+        "vendor-dir": "Packages/Libraries"
+    }
+}
