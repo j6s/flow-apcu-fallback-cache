@@ -18,4 +18,4 @@ install:
   - '[ $COMPOSER_LOWEST == 1 ] && composer update --prefer-lowest || composer install'
 
 script:
-  - ./bin/phpcs Classes Tests
+  - ./bin/phpcs Classes
