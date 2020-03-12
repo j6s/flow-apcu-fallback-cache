@@ -4,13 +4,18 @@ namespace J6s\ApcuFallbackCache;
 
 use Neos\Cache\Backend\AbstractBackend;
 use Neos\Cache\Backend\ApcuBackend;
+use Neos\Cache\Backend\BackendInterface;
 use Neos\Cache\Backend\IterableBackendInterface;
 use Neos\Cache\Backend\PhpCapableBackendInterface;
 use Neos\Cache\Backend\TaggableBackendInterface;
 use Neos\Cache\EnvironmentConfiguration;
 use Neos\Cache\Frontend\FrontendInterface;
 
-class Backend
+class Backend implements
+    BackendInterface,
+    TaggableBackendInterface,
+    IterableBackendInterface,
+    PhpCapableBackendInterface
 {
 
     /**
