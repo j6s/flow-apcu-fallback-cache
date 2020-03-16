@@ -34,8 +34,8 @@ class Backend implements
         if (\extension_loaded('apcu')) {
             $this->backend = new ApcuBackend($environmentConfiguration, $options);
         } else {
-            $class = $options['fallbackBackend'];
-            $this->backend = new $class($fallback['backend'], $fallback['backendOptions'] ?? []);
+            $class = $options['backend'];
+            $this->backend = new $class($environmentConfiguration, $fallback['backendOptions'] ?? []);
         }
     }
 
