@@ -39,7 +39,7 @@ class Backend implements
         }
     }
 
-    public function set(string $entryIdentifier, string $data, array $tags = [], int $lifetime = null)
+    public function set(string $entryIdentifier, string $data, array $tags = [], int $lifetime = null): void
     {
         $this->backend->set($entryIdentifier, $data, $tags, $lifetime);
     }
@@ -59,12 +59,12 @@ class Backend implements
         return $this->backend->remove($entryIdentifier);
     }
 
-    public function flush()
+    public function flush(): void
     {
         $this->backend->flush();
     }
 
-    public function collectGarbage()
+    public function collectGarbage(): void
     {
         $this->backend->collectGarbage();
     }
@@ -109,7 +109,7 @@ class Backend implements
         $this->backend->rewind();
     }
 
-    public function setCache(FrontendInterface $cache)
+    public function setCache(FrontendInterface $cache): void
     {
         $this->backend->setCache($cache);
     }

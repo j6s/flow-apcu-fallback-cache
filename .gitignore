@@ -2,3 +2,4 @@ Packages/
 bin/
 composer.lock
 .idea/
+.ddev/
